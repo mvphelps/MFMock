@@ -31,6 +31,6 @@ Assert.AreEqual(true, o.ChangeLog[2].State);
 Assert.AreEqual(true, o.ChangeLog[3].State);  
 Assert.AreEqual(false, o.ChangeLog[4].State);  
   
-That is all there is to it. Some example projects will be available shortly (shooting for 5/8). 
+That is all there is to it. Some example projects will be available shortly (shooting for 5/8/2015). 
   
 Currently there is support for AnalogInput, InputPort, InterruptPort, OutputPort and PWM. Also note that PWM is in a separate assembly (MFMock.PWM), to follow the assembly separation used in the Micro Framework. 
