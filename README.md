@@ -34,3 +34,5 @@ Assert.AreEqual(false, o.ChangeLog[4].State);
 That is all there is to it. See the example projects for more demonstrations.
   
 Currently there is support for AnalogInput, InputPort, InterruptPort, OutputPort and PWM. Also note that PWM is in a separate assembly (MFMock.PWM), to follow the assembly separation used in the Micro Framework. 
+
+Sorry there is no Nuget package for this yet, that is the next thing I plan to work out.
