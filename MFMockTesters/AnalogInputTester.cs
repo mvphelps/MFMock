@@ -78,7 +78,11 @@ namespace MFMockTesters
         public int[] RawSamples
         {
             get { return mRawSamples; }
-            set { mRawSamples = value; }
+            set
+            {
+                mRawSamples = value;
+                mReadRawSamplesIndex = 0;
+            }
         }
         /// <summary>
         /// Indicates the index of the next sample to be read. Zero based index, the first sample is index 0.
