@@ -90,7 +90,7 @@ namespace MFMockTesters
         /// True if Stop was the last method invoked. False if Start was.
         /// </summary>
         public readonly bool Stopped;
-        //Did use a property, but NetMF converted that to an int property. Changed in 1.0.2.0, deployed as breaking change.
+        //Did use a property, but NetMF converted that to an int property. Changed in 1.0.3.0, deployed as breaking change.
         //public bool Stopped{get { return !Started; }}
 
 
