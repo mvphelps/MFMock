@@ -63,9 +63,9 @@
       <Project>{85003B5C-2E8C-47D3-9FEC-64AD47244B58}</Project>
       <Name>MFMock.PWM</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MFMockTesters\MFMockTesters.csproj">
+    <ProjectReference Include="..\MFMockTesters\MFMock.Testers.csproj">
       <Project>{6674480D-EEBE-4926-8F7D-FD5E3ACFC441}</Project>
-      <Name>MFMockTesters</Name>
+      <Name>MFMock.Testers</Name>
     </ProjectReference>
     <ProjectReference Include="..\MFMock\MFMock.csproj">
       <Project>{8C5B02C4-B4B2-4416-A391-F257F261B9E6}</Project>

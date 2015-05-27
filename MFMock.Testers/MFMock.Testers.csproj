@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <AssemblyName>MFMockTesters</AssemblyName>
+    <AssemblyName>MFMock.Testers</AssemblyName>
     <OutputType>Library</OutputType>
-    <RootNamespace>MFMockTesters</RootNamespace>
+    <RootNamespace>MFMock.Testers</RootNamespace>
     <ProjectTypeGuids>{b69e3092-b931-443c-abe7-7e7b65f2a37f};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
@@ -51,5 +51,8 @@
       <Project>{8C5B02C4-B4B2-4416-A391-F257F261B9E6}</Project>
       <Name>MFMock</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MFMock.Testers.nuspec" />
   </ItemGroup>
 </Project>
