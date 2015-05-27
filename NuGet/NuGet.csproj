@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
-    <AssemblyName>MFMock.PWM</AssemblyName>
+    <AssemblyName>NuGet</AssemblyName>
     <OutputType>Library</OutputType>
-    <RootNamespace>MFMock</RootNamespace>
+    <RootNamespace>NuGet</RootNamespace>
     <ProjectTypeGuids>{b69e3092-b931-443c-abe7-7e7b65f2a37f};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{85003B5C-2E8C-47D3-9FEC-64AD47244B58}</ProjectGuid>
+    <ProjectGuid>{BDA3113D-6B8F-4DE3-A43F-083382A49706}</ProjectGuid>
     <TargetFrameworkVersion>v4.3</TargetFrameworkVersion>
     <NetMfTargetsBaseDir Condition="'$(NetMfTargetsBaseDir)'==''">$(MSBuildExtensionsPath32)\Microsoft\.NET Micro Framework\</NetMfTargetsBaseDir>
   </PropertyGroup>
@@ -28,16 +28,22 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <Import Project="$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets" />
   <ItemGroup>
-    <Compile Include="IPWM.cs" />
-    <Compile Include="MFMockExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PWMWrapper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.SPOT.Hardware.PWM" />
-    <Reference Include="Microsoft.SPOT.Native">
-    </Reference>
+    <Reference Include="Microsoft.SPOT.Native" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="MFMock.PWM\MFMock.PWM.nuspec" />
+    <None Include="MFMock.Testers\MFMock.Testers.nuspec" />
+    <None Include="MFMock\MFMock.nuspec" />
+    <None Include="package.cmd" />
+    <None Include="push.cmd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NuGet.exe" />
+  </ItemGroup>
+  <Import Condition="EXISTS('$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets')" Project="$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets" />
+  <Import Condition="!EXISTS('$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets')" Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

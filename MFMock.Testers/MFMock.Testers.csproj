@@ -52,7 +52,4 @@
       <Name>MFMock</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="MFMock.Testers.nuspec" />
-  </ItemGroup>
 </Project>

@@ -1,15 +1,14 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>$id$</id>
-    <version>$version$</version>
-    <title>$title$</title>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
+    <id>MFMock</id>
+    <version>1.0.1.0</version>
+    <authors>Phelps Consulting</authors>
+    <owners>Phelps Consulting</owners>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseUrl>
     <projectUrl>https://github.com/mvphelps/MFMock</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
+    <description>Mocking tools for the .NET Micro Framework. This package contains the core pieces needed in your project and your test project.</description>
     <releaseNotes>Initial release.</releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>MFMock netmf tdd micro</tags>

@@ -46,9 +46,4 @@
     <Reference Include="Microsoft.SPOT.Native">
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="MFMock.nuspec">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
 </Project>
