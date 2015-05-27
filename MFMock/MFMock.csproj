@@ -47,6 +47,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="MFMock.nuspec" />
+    <None Include="MFMock.nuspec">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
 </Project>
