@@ -28,6 +28,23 @@ namespace Tests.MFMockTesters
             Assert.AreEqual((uint)0, fired_value);
         }
 
+        public void ConstructWithSamples()
+        {
+
+            var x = new InterruptPortTester(new bool[]{true, false});
+            x.OnInterrupt += SeeInterrupt;
+
+            x.FireInterrupt();
+            Assert.IsTrue(fired);
+            Assert.AreEqual((uint)1, fired_value);
+
+            fired = false;
+            x.FireInterrupt();
+            Assert.IsTrue(fired);
+            Assert.AreEqual((uint)0, fired_value);
+
+
+        }
         private void SeeInterrupt(uint data1, uint data2, DateTime time)
         {
             fired = true;

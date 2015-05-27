@@ -12,11 +12,10 @@ namespace Examples
         public void OneHeatCycle()
         {
             
-            var temp = new AnalogInputTester();
-            //Our samples shoudl demonstrate that the furnas does not run at the 
+            var temp = new AnalogInputTester(new int[] {72, 71, 70, 72, 73});
+            //Our samples should demonstrate that the furnas does not run at the 
             //set point or 1 degree below. It will then turn on if lower, and stay 
             //on up to 1 degree above the set point.
-            temp.RawSamples = new int[] {72, 71, 70, 72, 73};
             var furnas = new OutputPortTester(false);
             var t = new Thermostat(temp, furnas);
             

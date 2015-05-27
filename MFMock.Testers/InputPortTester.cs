@@ -28,6 +28,10 @@ namespace MFMockTesters
         {   //If the dev fails to supply samples, this will still allow us to fail with the IndexOutOfRangeException
             mSamples = new bool[] { };
         }
+        public InputPortTester(bool[] samples)
+        {
+            mSamples = samples;
+        }
         /// <summary>
         /// Assigns a single sample for reading.
         /// </summary>

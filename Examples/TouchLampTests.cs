@@ -12,8 +12,7 @@ namespace Examples
         public void UserTouchesToBrighten()
         {
             var brightness = new PWMTester();
-            var touch = new InterruptPortTester();
-            touch.Samples = new bool[] { true, true, true, true, true};
+            var touch = new InterruptPortTester(new bool[] { true, true, true, true, true});
             var lamp = new TouchLamp(brightness, touch);
 
             touch.FireInterrupt();  //First interrupt causes us to start the PWM, and set the duty cycle. This is 2 events.

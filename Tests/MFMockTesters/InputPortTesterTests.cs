@@ -45,8 +45,19 @@ namespace Tests.MFMockTesters
 
             AssertNoMoreSamples(port);
         }
-        
 
+        public void ConstructWithSamples()
+        {
+            var t = new InputPortTester(new bool[] { true, true, false, false, true });
+            IInputPort port = t;
+
+            Assert.AreEqual(true, port.Read());
+            Assert.AreEqual(true, port.Read());
+            Assert.AreEqual(false, port.Read());
+            Assert.AreEqual(3, t.ReadIndex);
+            Assert.AreEqual(false, port.Read());
+            Assert.AreEqual(true, port.Read());
+        }
         
 
         private static void AssertNoMoreSamples(IInputPort port)

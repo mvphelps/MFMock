@@ -85,10 +85,15 @@ namespace MFMockTesters
         /// True if Start was the last method invoked. False if Stop was.
         /// </summary>
         public readonly bool Started;
+
         /// <summary>
         /// True if Stop was the last method invoked. False if Start was.
         /// </summary>
-        public bool Stopped{get { return !Started; }}
+        public readonly bool Stopped;
+        //Did use a property, but NetMF converted that to an int property. Changed in 1.0.2.0, deployed as breaking change.
+        //public bool Stopped{get { return !Started; }}
+
+
         /// <summary>
         /// The assigned duty cycle. 
         /// </summary>
@@ -97,6 +102,7 @@ namespace MFMockTesters
         public PWMChange(bool started, double dutyCycle)
         {
             Started = started;
+            Stopped = !started;
             DutyCycle = dutyCycle;
         }
     }

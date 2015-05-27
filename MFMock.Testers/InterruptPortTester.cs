@@ -6,6 +6,14 @@ namespace MFMockTesters
 {
     public class InterruptPortTester : InputPortTester, IInterruptPort
     {
+        public InterruptPortTester(bool[] samples): base(samples)
+        {
+        }
+
+        public InterruptPortTester():base()
+        {
+        }
+
         public void ClearInterrupt()
         {
             IsInterruptCleared = true;
@@ -40,8 +48,5 @@ namespace MFMockTesters
                 OnInterrupt.Invoke(0, (uint) (Read() ? 1 : 0), DateTime.Now);
             }
         }
- 
-
- 
     }
 }

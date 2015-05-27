@@ -24,8 +24,7 @@ namespace Examples
 
         public void TurnOnAndOff()
         {   //Demonstrates utilizing multi-sample mode via the Samples property.
-            var i = new InputPortTester();
-            i.Samples = new []{true, false};
+            var i = new InputPortTester(new []{true, false});
             var o = new OutputPortTester(false);
 
             var simpleSwitch = new SimpleSwitch(i, o);

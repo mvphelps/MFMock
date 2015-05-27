@@ -36,6 +36,16 @@ namespace MFMockTesters
             mSamples = new double[]{};
             mRawSamples = new int[] {};
         }
+        public AnalogInputTester(double[] samples)
+        {
+            mSamples = samples;
+            mRawSamples = new int[] { };
+        }
+        public AnalogInputTester(int[] rawSamples)
+        {
+            mSamples = new double[] { };
+            mRawSamples = rawSamples;
+        }
         /// <summary>
         /// Assigns a single sample for reading.
         /// </summary>
