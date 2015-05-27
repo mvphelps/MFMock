@@ -6,11 +6,15 @@ This framework provides the basic objects necessary mock out actual hardware pin
 To get started, reference the MFMock assembly in your main assembly. Where you create actual IO objects, call the .Wrap() extension method. This will put your port into a wrapper object that supports an interface. Update your code references to use the interface type instead, and your main code is ready to go.
 
 For example, change this:  
+```csharp
 AnalogInput a = new AnalogInput(Cpu.AnalogChannel.ANALOG_0);
+```
 
 To this:  
+```csharp
 using MFMock;  
 IAnalogInput a = new AnalogInput(Cpu.AnalogChannel.ANALOG_0).Wrap();
+```
 
 To test, setup an MFUnit test project, and target the emulator. Reference MFMock, and MFMockTesters. The Testers assembly contains the Mock object you'll use for testing. Create the corresponding mock object. If it is an input type, it will allow you to set one or more data samples you'd like it to supply. If it is an output type, it will record changes and make them available. For example:
 
@@ -35,4 +39,3 @@ That is all there is to it. See the example projects for more demonstrations.
   
 Currently there is support for AnalogInput, InputPort, InterruptPort, OutputPort and PWM. Also note that PWM is in a separate assembly (MFMock.PWM), to follow the assembly separation used in the Micro Framework. 
 
-Sorry there is no Nuget package for this yet, that is the next thing I plan to work out.
