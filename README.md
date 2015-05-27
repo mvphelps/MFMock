@@ -46,8 +46,11 @@ Assert.AreEqual(false, o.ChangeLog[4].State);
 
 # Examples
 See the Examples folder for projects and more demonstrations. I recommend looking at them in this order:
+
 1. SimpleSwitchTests
+
 2. ThermostatTests
+
 3. TouchLampTests
   
 
