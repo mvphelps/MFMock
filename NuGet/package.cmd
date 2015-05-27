@@ -1,3 +1,5 @@
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe ..\MFMock.sln /property:Configuration=Release
+
 del MFMock*.nupkg /s
 
 del MFMock\lib\netmf43 /s /Q
